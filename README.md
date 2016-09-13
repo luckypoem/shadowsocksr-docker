@@ -1,25 +1,31 @@
 # ShadowsocksR for Docker
 
 ```
-## on server
+# on server
+
+## install docker
 
 curl -sSL https://get.docker.com/ | sh
 sudo usermod -aG docker _your_username_
 
+#Remember that you will have to log out and back in for this to take effect!
+
+## build image
+
 git clone https://github.com/targence/shadowsocksr-docker
 cd shadowsocksr-docker
-nano shadowsocks.json # change this line   "password": "_your_password_",
-
 docker build -t targence/shadowsocksr .
-docker run -d -p 443:443 --name shadowsocksr-server targence/shadowsocksr
 
+## run
 
-## on client
+docker run -d -p 443:443 -e "password=_your_password_" --name shadowsocksr-server targence/shadowsocksr
+
+# GoAgentX client config
 
 {
 	"server": "_your_server_ip_",
-	"server_port": _your_server_port_,
-	"local_port": _your_local_port_,
+	"server_port": 443,
+	"local_port": 1080,
 	"password":"_your_password_",
 	"timeout": 120,
 	"method": "aes-256-cfb",
