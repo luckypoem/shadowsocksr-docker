@@ -18,7 +18,7 @@ docker build -t targence/shadowsocksr .
 
 ## run
 
-docker run -d -p 443:443 -e "password=_your_password_" --name shadowsocksr-server targence/shadowsocksr
+docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-server targence/shadowsocksr
 
 # GoAgentX client config
 
