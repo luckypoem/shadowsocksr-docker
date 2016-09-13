@@ -17,10 +17,12 @@ RUN wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz && \
 
 RUN git clone -b manyuser https://github.com/breakwa11/shadowsocks.git ~/shadowsocks
 
-ADD shadowsocks.json /etc/
+ADD shadowsocks.tmpl /etc/
 ADD start.sh /usr/local/bin/start.sh
 RUN chmod 755 /usr/local/bin/start.sh
+COPY entrypoint.sh /etc/
 
 EXPOSE 443
 
+ENTRYPOINT ["/etc/entrypoint.sh"]
 CMD ["sh", "-c", "start.sh"]
