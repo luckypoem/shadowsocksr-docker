@@ -1,26 +1,15 @@
 # ShadowsocksR for Docker
 
 ```
-# on server
-
-## install docker
-
-curl -sSL https://get.docker.com/ | sh
-sudo usermod -aG docker _your_username_
-
-#Remember that you will have to log out and back in for this to take effect!
-
-## build image
-
-git clone https://github.com/targence/shadowsocksr-docker
-cd shadowsocksr-docker
-docker build -t targence/shadowsocksr .
 
 ## run
 
 docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-server targence/shadowsocksr
 
-# GoAgentX client config
+```
+
+```
+## GoAgentX client config
 
 {
 	"server": "_your_server_ip_",
@@ -34,5 +23,21 @@ docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-serve
 	"obfs_param": ""
 }
 
+
+```
+
+```
+## install docker
+
+curl -sSL https://get.docker.com/ | sh
+sudo usermod -aG docker _your_username_
+
+#Remember that you will have to log out and back in for this to take effect!
+
+## build image
+
+git clone https://github.com/targence/shadowsocksr-docker
+cd shadowsocksr-docker
+docker build -t targence/shadowsocksr .
 
 ```
