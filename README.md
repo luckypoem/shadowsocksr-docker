@@ -29,6 +29,11 @@ docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-serve
 ```
 ## install docker
 
+adduser _your_username_
+adduser _your_username_ sudo
+sudo su _your_username_
+cd ~
+
 curl -sSL https://get.docker.com/ | sh
 sudo usermod -aG docker _your_username_
 
