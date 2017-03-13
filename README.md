@@ -9,20 +9,13 @@ docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-serve
 ```
 
 ```
-## GoAgentX client config
+## Dont't forget open 443 port
+```
 
-{
+```
 	"server": "_your_server_ip_",
 	"server_port": 443,
-	"local_port": 1080,
-	"password":"_your_password_",
-	"timeout": 120,
 	"method": "aes-256-cfb",
-	"protocol": "auth_sha1",
-	"obfs": "tls1.2_ticket_auth",
-	"obfs_param": ""
-}
-
 
 ```
 
