@@ -1,7 +1,23 @@
 # ShadowsocksR for Docker
 
+
+```
+## install docker
+
+adduser _your_username_
+usermod -aG sudo targence
+su _your_username_
+cd ~
+
+curl -sSL https://get.docker.com/ | sh
+sudo usermod -aG docker _your_username_
+
+#Remember that you will have to log out and back in for this to take effect!
+
 ```
 
+
+```
 ## run
 
 docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-server targence/shadowsocksr
@@ -20,18 +36,6 @@ docker run -d -p 443:443 -e PASSWORD="_your_password_" --name shadowsocksr-serve
 ```
 
 ```
-## install docker
-
-adduser _your_username_
-adduser _your_username_ sudo
-sudo su _your_username_
-cd ~
-
-curl -sSL https://get.docker.com/ | sh
-sudo usermod -aG docker _your_username_
-
-#Remember that you will have to log out and back in for this to take effect!
-
 ## build image
 
 git clone https://github.com/targence/shadowsocksr-docker
