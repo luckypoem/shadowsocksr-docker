@@ -5,7 +5,7 @@
 ## install docker
 
 adduser _your_username_
-usermod -aG sudo targence
+usermod -aG sudo _your_username_
 su _your_username_
 cd ~
 
